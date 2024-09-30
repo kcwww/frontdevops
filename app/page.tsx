@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 const PostPing = async () => {
-  const res = await fetch('https://api.jungchanye.store:8080/ping', {
+  const res = await fetch('https://api.jungchanye.store:443/ping', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message: 'ping' }),
@@ -14,7 +14,7 @@ const PostPing = async () => {
 };
 
 const GetResponse = async () => {
-  const res = await fetch('https://api.jungchanye.store:8080/ping');
+  const res = await fetch('https://api.jungchanye.store:443/ping');
   const data = await res.json();
   console.log(data);
 };
